@@ -12,9 +12,11 @@ picture: assets/images/me.png
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
-resume: true
+resume: false
 resume-external: true
 resume-url: https://google.com/?q=my+resume
+
+publications: true
 
 url: https://lukemetz.github.io
 
@@ -29,7 +31,7 @@ permalink: /:title/
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
-  shortname: luke_metz# enter this from your disqus account
+  shortname: lukemetz-com
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
@@ -74,6 +76,7 @@ projects: true
 # if you don't need "about" or "blog", comment them out below
 about: true
 blog: true
+publications: true
 
 # do you want to show the "read time" of the posts?
 read-time: true
@@ -102,3 +105,68 @@ plugins:
 
 jekyll-mentions:
     base_url: https://github.com
+
+publications_list:
+  - year_split: true
+    year: 2018
+  - title: Adversarial Spheres
+    people:
+      - Justin Gilmer
+      - Luke Metz
+      - Fartash Faghri
+      - Samuel S Schoenholz
+      - Maithra Raghu
+      - Martin Wattenberg
+      - Ian Goodfellow
+    arxiv: https://arxiv.org/pdf/1801.02774
+
+  - year_split: true
+    year: 2017
+  - title: Supervised Learning of Unsupervised Learning Rules
+    people:
+      - Luke Metz
+      - Brian Cheung
+      - Niru Maheswaranathan
+      - Jascha Sohl-dickstein
+    arxiv: http://metalearning.ml/papers/metalearn17_metz.pdf
+    location: NIPS 2017 metalearning workshop
+  - title: Compositional Pattern Producing GAN
+    people:
+      - Luke Metz
+      - Ishaan Gulrajani
+    arxiv: https://nips2017creativity.github.io/doc/CPPNGAN.pdf
+    location: NIPS 2017 creativity workshop
+
+  - title: Discrete Sequential Prediction of Continuous Actions for Deep RL
+    people:
+      - Luke Metz
+      - Julian Ibarz
+      - Navdeep Jaitly
+      - James Davidson
+    arxiv: https://arxiv.org/pdf/1705.05035
+
+  - title: "Began: Boundary Equilibrium Generative Adversarial Networks"
+    people:
+      - David Berthelot
+      - Tom Schumm
+      - Luke Metz
+    arxiv: https://arxiv.org/pdf/1703.10717
+
+  - title: Unrolled Generative Adversarial Networks
+    people:
+      - Luke Metz
+      - Ben Poole
+      - David Pfau
+      - Jascha Sohl-Dickstein
+    location: International Conference on Learning Representations, Toulon, France, 2017.
+    arxiv: https://arxiv.org/abs/1611.02163
+
+  - year_split: true
+    year: 2016
+  - title: Unsupervised Representation Learning With Deep Convolutional Generative Adversarial Networks
+    people:
+      - Alec Radford
+      - Luke Metz
+      - Soumith Chintala
+    location: International Conference on Learning Representations, San Juan, Puerto Rico, 2016.
+    arxiv: https://arxiv.org/abs/1511.06434
