@@ -50,7 +50,7 @@ To drive this, I secured a [20KG servo](https://www.amazon.com/gp/product/B01N0X
 </div>
 
 ### Axes 2 - 4:
-My main consideration was what to do with motors. I knew I didn’t want to deal with any of the more exotic actuation types such as pneumatic. In the interest of keeping things simple, I decided to place motors as close to the driving axis as possible and go with simple gearing as opposed to more complex cable / belt driven solutions. While researching I was astonished at the complexity of  industrial arms. In particular the geek group has a few different teardown like videos of two rather large KUKA arms that I [would](https://www.youtube.com/watch?v=6YiPrytt_Ss) [recommend](https://www.youtube.com/watch?v=EfmjhfN8D-Q).
+My main consideration was what to do with motors. I knew I didn’t want to deal with any of the more exotic actuation types such as pneumatic. In the interest of keeping things simple, I decided to place motors as close to the driving axis as possible and go with simple gearing as opposed to more complex cable / belt driven solutions. While researching I was astonished at the complexity of  industrial arms. In particular the geek group has a few different teardown-like videos of two rather large KUKA arms that I [would](https://www.youtube.com/watch?v=6YiPrytt_Ss) [recommend](https://www.youtube.com/watch?v=EfmjhfN8D-Q).
 I tried to keep my  pieces as small and lightweight as possible both to lower print times and to keep the weight down. I once again went with the same servo form factor for motors mostly due to ease of use. I used the same 20kg motor, but expect to need to swap out the first axis with a higher torque version. The axes are M8 threaded rod, held via friction to some 3D printed parts.
 
 <div class="side-by-side">
