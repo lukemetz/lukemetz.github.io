@@ -23,7 +23,7 @@ This is the second post in the documentation of my attempt to build a robotic ar
 With the mechanical pieces in a semi-functioning state, my next action was to figure out how to drive and control this contraption. In this post, I provide a high level overview of the electronics and sensors I used and briefly touch on the firmware and communication which enable technically simple, yet incredibly difficult manual control. Bellow you can see the arm struggling with the underpowered motors.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tRS1kZs6feg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-<figcaption class="caption">Arm being controled via xbox 360 controller.</figcaption>
+<figcaption class="caption">Arm being controlled via xbox 360 controller.</figcaption>
 
 
 ### Motors and Electronics:
@@ -39,13 +39,13 @@ These are great and very modular as they are not tied to the motor in any way. A
 Because I don’t plan this far into the future, I 3D printed little sensor holders, and hot glued them to the main body of the arm. Additionally, wire routing is done in a similar way.
 
 ![Sensors](/assets/images/blog2/sensor3_2.jpg)
-<figcaption class="caption"> 3D printed sensor holders
+<figcaption class="caption"> 3D printed sensor holders.
 </figcaption>
 
 These sensor breakout boards communicate over I2C and, sadly, all share the same I2C address, which means that normally I can only use one at a time. To remedy this, I am using an [I2C multiplexer](https://www.amazon.com/gp/product/B015HJX33Y/ref=oh_aui_search_detailpage?ie=UTF8&psc=1) which allows me to select the chip I seek to read and write from.
 
 ![Wires](/assets/images/blog2/electronics_s.jpg)
-<figcaption class="caption"> Plotting one axes control signal and quaternion from a single sensor.
+<figcaption class="caption"> All electronics haphazardly scattered next to the arm.
 </figcaption>
 
 
