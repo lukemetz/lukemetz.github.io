@@ -21,7 +21,7 @@ externalLink: false
 ---
 
 
-This is the 3rd installment in the chronicle of my attempt to build a robotic arm to make me tea. For the mechanical build, see [here](/project-log-matcha-making-robot-arm), and for the electrical and software groundwork for this post see [model predictive control](https://en.wikipedia.org/wiki/Model_predictive_control).
+This is the 3rd installment in the chronicle of my attempt to build a robotic arm to make me tea. For the mechanical build, see [here](/project-log-matcha-making-robot-arm), and for the electrical and software groundwork for this post see [here](project-log-electronics).
 
 This thing is borderline impossible to control with an Xbox controller. Not only are there too many joints, but there is no notion of correcting for the forces of gravity. As such, my first plan of attack is to see if I can build some controls that make it easier to control the arm by hand -- in specific, when I release the controls on my XBox controller, I would like the robot to stop moving as opposed to come crashing down. From here, the hope is that I can then do point-to-point movement and “program” it to do tasks by running through a set of predefined states. This roadmap is designed to be sample efficient. Unlike Google, I do not have an [army of these arms](https://research.googleblog.com/2016/03/deep-learning-for-robots-learning-from.html) at my disposal. This means that  the more "traditional" deep reinforcement learning approaches (model-free control) are out of the question, as  they are just too sample inefficient. It’s going to take a while then to get this point, but this is what I have so far.
 
