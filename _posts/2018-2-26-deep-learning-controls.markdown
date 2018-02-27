@@ -11,7 +11,7 @@ tag:
 image:
 headerImage: false
 projects: false
-hidden: true
+hidden: false
 description: "A first attempt to use machine learning to control my
 robotic arm."
 category: blog
