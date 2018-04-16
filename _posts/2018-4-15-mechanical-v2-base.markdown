@@ -1,5 +1,5 @@
 ---
-title: "Robot Arm Base Mechanical Design V2"
+title: "Robot Arm Mechanical Design V2: Base"
 layout: post
 date: 2018-04-15 12:00
 tag:
