@@ -108,7 +108,44 @@ jekyll-mentions:
 
 publications_list:
   - year_split: true
+    year: 2019
+  - title: Meta-Learning Update Rules for Unsupervised Representation Learning
+    people:
+      - Luke Metz
+      - Brian Cheung
+      - Niru Maheswaranathan
+      - Jascha Sohl-Dickstein
+    arxiv: http://metalearning.ml/papers/metalearn17_metz.pdf
+    location: ICLR 2019 (oral), COSYNE 2018 (oral), NeurIPS 2017 metalearning workshop
+
+  - title: Towards GAN Benchmarks Which Require Generalization 
+    people:
+      - Ishaan Gulrajani 
+      - Colin Raffel
+      - Luke Metz
+    location: ICLR 2019
+
+  - year_split: true
     year: 2018
+
+  - title: Learned optimizers that outperform SGD on wall-clock and validation loss
+    people:
+      - Luke Metz
+      - Niru Maheswaranathan
+      - Jeremy Nixon
+      - C. Daniel Freeman
+      - Jascha Sohl-Dickstein
+    location: NeurIPS 2018 metalearning workshop
+    arxiv: https://arxiv.org/pdf/1810.10180.pdf
+
+  - title: "Guided evolutionary strategies: escaping the curse of dimensionality in random search"
+    people:
+      - Niru Maheswaranathan
+      - Luke Metz
+      - George Tucker
+      - Jascha Sohl-Dickstein
+    arxiv: https://arxiv.org/pdf/1806.10230.pdf
+
   - title: Adversarial Spheres
     people:
       - Justin Gilmer
@@ -122,20 +159,13 @@ publications_list:
 
   - year_split: true
     year: 2017
-  - title: Supervised Learning of Unsupervised Learning Rules
-    people:
-      - Luke Metz
-      - Brian Cheung
-      - Niru Maheswaranathan
-      - Jascha Sohl-dickstein
-    arxiv: http://metalearning.ml/papers/metalearn17_metz.pdf
-    location: NIPS 2017 metalearning workshop
+
   - title: Compositional Pattern Producing GAN
     people:
       - Luke Metz
       - Ishaan Gulrajani
     arxiv: https://nips2017creativity.github.io/doc/CPPNGAN.pdf
-    location: NIPS 2017 creativity workshop
+    location: NeurIPS 2017 creativity workshop
 
   - title: Discrete Sequential Prediction of Continuous Actions for Deep RL
     people:
@@ -158,7 +188,7 @@ publications_list:
       - Ben Poole
       - David Pfau
       - Jascha Sohl-Dickstein
-    location: International Conference on Learning Representations, Toulon, France, 2017.
+    location: ICLR 2017
     arxiv: https://arxiv.org/abs/1611.02163
 
   - year_split: true
@@ -168,5 +198,5 @@ publications_list:
       - Alec Radford
       - Luke Metz
       - Soumith Chintala
-    location: International Conference on Learning Representations, San Juan, Puerto Rico, 2016.
+    location: ICLR 2016
     arxiv: https://arxiv.org/abs/1511.06434
