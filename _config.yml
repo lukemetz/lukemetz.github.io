@@ -124,6 +124,7 @@ publications_list:
       - Colin Raffel
       - Luke Metz
     location: ICLR 2019
+    arxiv: https://openreview.net/pdf?id=HkxKH2AcFm
 
   - year_split: true
     year: 2018
