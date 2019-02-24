@@ -112,10 +112,10 @@ publications_list:
   - title: Meta-Learning Update Rules for Unsupervised Representation Learning
     people:
       - Luke Metz
-      - Brian Cheung
       - Niru Maheswaranathan
+      - Brian Cheung
       - Jascha Sohl-Dickstein
-    arxiv: http://metalearning.ml/papers/metalearn17_metz.pdf
+    arxiv: https://arxiv.org/pdf/1804.00222.pdf
     location: ICLR 2019 (oral), COSYNE 2018 (oral), NeurIPS 2017 metalearning workshop
 
   - title: Towards GAN Benchmarks Which Require Generalization 
