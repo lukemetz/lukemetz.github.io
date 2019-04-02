@@ -68,4 +68,4 @@ Annoying soldering required for perf boards.
 
 On the software side I am still sending inputs from an Xbox controller over sending SLIP to the master board. The master board now sends packets over I2C to each slave board. The slave boards listen for these, then set the appropriate pins to control the motor controller.
 
-As of now, I have 2 axis more or less assembled with electronics. Current plans now are to 3D print and assemble a third axis to  figure out how to better control this thing!
+As of now, I have 2 axis more or less assembled with electronics. Current plans now are to 3D print and assemble a third axis, finish up controls, get more sensor data out, and figure out how to control this thing!
