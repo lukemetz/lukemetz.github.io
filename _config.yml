@@ -109,6 +109,27 @@ jekyll-mentions:
 publications_list:
   - year_split: true
     year: 2019
+
+  - title: Understanding and correcting pathologies in the training of learned optimizers
+    people:
+      - Luke Metz
+      - Niru Maheswaranathan
+      - Jeremy Nixon
+      - C. Daniel Freeman
+      - Jascha Sohl-Dickstein
+    location: ICML 2019 (20 min oral), NeurIPS 2018 metalearning workshop
+    arxiv: https://arxiv.org/pdf/1810.10180.pdf
+
+
+  - title: "Guided evolutionary strategies: Augmenting random search with surrogate gradients"
+    people:
+      - Niru Maheswaranathan
+      - Luke Metz
+      - George Tucker
+      - Jascha Sohl-Dickstein
+    location: ICML 2019
+    arxiv: https://arxiv.org/pdf/1806.10230.pdf
+
   - title: Meta-Learning Update Rules for Unsupervised Representation Learning
     people:
       - Luke Metz
@@ -118,6 +139,7 @@ publications_list:
     arxiv: https://arxiv.org/pdf/1804.00222.pdf
     location: ICLR 2019 (oral), COSYNE 2018 (oral), NeurIPS 2017 metalearning workshop
 
+
   - title: Towards GAN Benchmarks Which Require Generalization 
     people:
       - Ishaan Gulrajani 
@@ -126,26 +148,21 @@ publications_list:
     location: ICLR 2019
     arxiv: https://openreview.net/pdf?id=HkxKH2AcFm
 
+
+  - title: Using learned optimizers to make models robust to input noise
+    people:
+      - Luke Metz
+      - Niru Maheswaranathan
+      - Jonathon Shlens
+      - Jascha Sohl-Dickstein
+      - Ekin D. Cubuk
+    location: "ICML workshop: Uncertainty and Robustness in Deep Learning 2019"
+    arxiv: https://arxiv.org/pdf/1906.03367.pdf
+
+
   - year_split: true
     year: 2018
 
-  - title: Learned optimizers that outperform SGD on wall-clock and validation loss
-    people:
-      - Luke Metz
-      - Niru Maheswaranathan
-      - Jeremy Nixon
-      - C. Daniel Freeman
-      - Jascha Sohl-Dickstein
-    location: NeurIPS 2018 metalearning workshop
-    arxiv: https://arxiv.org/pdf/1810.10180.pdf
-
-  - title: "Guided evolutionary strategies: escaping the curse of dimensionality in random search"
-    people:
-      - Niru Maheswaranathan
-      - Luke Metz
-      - George Tucker
-      - Jascha Sohl-Dickstein
-    arxiv: https://arxiv.org/pdf/1806.10230.pdf
 
   - title: Adversarial Spheres
     people:
