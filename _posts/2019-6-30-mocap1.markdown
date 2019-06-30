@@ -1,7 +1,7 @@
 ---
 title: "Motion Capture via Probabilistic Inference"
 layout: post
-date: 2019-06-30 12:00
+date: 2019-06-30 11:00
 tag:
 - project
 - robotics
@@ -46,9 +46,9 @@ I am a Bayesian at heart, so naturally I turned to these tools when designing th
 For now though, I started with something simple and entirely in a simulated world. This is great because I can specify (and thus know) the ground truth generative process. In this setup, I am assuming I have a series of 2D point readings (observed data) produced via a generative process defined by multiple virtual cameras (with unknown position and orientation) that observe multiple moving 3D points of unknown positions. The goal is to recover the camera positions and orientation as well as the positions of the points through time.
 
 ## Generative model
-Let’s first consider the generative model we wish to use for determining inference. Let us call the observed data, the 2D points observed from multiple cameras, $$X$$, and the unknown variables we wish to do inference on, the camera positions and 3D point locations, $$\theta$$. We can now define $$P(X|\theta)$$ which is the probability that we observe the 2D position readings ($X$) given the underlying world ($$\theta$$).
+Let’s first consider the generative model we wish to use for determining inference. Let us call the observed data, the 2D points observed from multiple cameras, $$X$$ (indexed by $c$ to denote camera index and $i$ to denote point index), and the unknown variables we wish to do inference on, the camera positions and 3D point locations, $$\theta$$. We can now define $$P(X|\theta)$$ which is the probability that we observe the 2D position readings ($$X$$) given the underlying world ($$\theta$$).
 
-To unpack this further, let’s first consider a single 3D point and a single 2D reading. Given a camera and a 3D point, we can project it into a 2D image. This projection is quite simple at this point and is based on a pinhole camera model. I parameterize the camera by a translation (encoded as a vector with 3 components, and a quaternion encoded with 4 components). We convert these 2 values into a translation matrix, $$T \in \mathcal{R}^{4,4}$$. Given a 3D point, $$m$$, we can apply this matrix, then the camera intrinsic matrix $I$, and then finally normalize by the 3rd component to recover the 2D position, $$X_i$$: $$ I T m =  [x’, y’, s, 1]^{T}$$, $$X_i = [x’/s,y’/s]$$. See [here](https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html) for more info.
+To unpack this further, let’s first consider a single 3D point and a single 2D reading. Given a camera and a 3D point, we can project it into a 2D image. This projection is quite simple at this point and is based on a pinhole camera model. I parameterize the camera by translation, encoded as a vector with 3 components, and rotation encoded by a quaternion with 4 components. We convert these 2 values into a transformation matrix, $$T \in \mathcal{R}^{4,4}$$. Given a 3D point, $$m$$, we can apply this matrix, then the camera intrinsic matrix $$I$$, and then finally normalize by the 3rd component to recover the 2D position, $$X_{ci}$$: $$ I T m =  [x’, y’, s, 1]^{T}$$, $$X_{ci} = [x’/s,y’/s]$$. See [here](https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html) for more info.
 
 Given perfect observations and cameras, this projection would map a single 3D point to a single 2D point. Because the real world is noisy, though, and to make inference easier, let’s assume we could map to one of many possible 2D values. In our case, let's assume a Gaussian probability centered around the predicted projection. Not all points, however, will be projected onto the image. Our camera only has a finite view and can only see points in front of it. In this case, let’s just call the (unnormalized) probability of a given image a constant.
 
@@ -56,7 +56,7 @@ Given perfect observations and cameras, this projection would map a single 3D po
 When we have multiple points, however, we need to know which 3D point belongs to which 2D point. For this, we can simply take the sum of probabilities of all possible permutations. This scales poorly O(N^2) with the number of points but should still be computable for the small number of points I expect to have.
 Finally, there is more than one camera, and more than one time point. To account for this, we can just take the product of these different components.
 
-$$P(X|\theta) = \sum_{permutations of points} \prod_{camera} \prod_{time}  \prod_{point}  P(X_{i} | camera, point)$$
+$$P(X|\theta) = \sum_{permutations of points} \prod_{cameras} \prod_{times}  \prod_{points}  P(X_{ci} | camera, point)$$
 
 
 
@@ -90,10 +90,10 @@ of the Gaussian in 2D space (sigma).
 </figcaption>
 
 
-To get around this, we can do a few things. First, we can anneal the sigma, or how sharply we lose probability, if our prediction is incorrect. Because there are certain areas of the loss landscape that are high curvature, I make use of gradient clipping, a trick used in the deep learning community to train RNN [cite](https://arxiv.org/abs/1211.5063). Finally, and somewhat counterintuitively for me, the more data we have, the easier the optimization process seems to be empirically.
+To get around this, we can do a few things. First, we can anneal the sigma, or how sharply we lose probability, if our prediction is incorrect. Because there are certain areas of the loss landscape that are high curvature, I make use of gradient clipping, a [trick](https://arxiv.org/abs/1211.5063) used in the deep learning community to train RNN. Finally, and somewhat counterintuitively for me, the more data we have, the easier the optimization process seems to be empirically.
 
 ## Results
-Thus far, I have tested all of this with 4 simulated cameras, at 2 points, and at 100 time points. I hardcoded the points to follow simple curves made from sin and cos. I use this ground truth data to generate the observed data, $X$, which is a list of 2D positions --  2 for each camera. For optimization, I randomly initialize 3 of the 4 cameras, (choosing 1 camera to be fixed to try to pin down extra degrees of freedom), as well as randomly initialize all the 3D points and optimize using Nesterov momentum with gradient clipping.
+Thus far, I have tested all of this with 4 simulated cameras, at 2 points, and at 100 time points. I hardcoded the points to follow simple curves made from sin and cos. I use this ground truth data to generate the observed data, $$X$$, which is a list of 2D positions --  2 for each camera. For optimization, I randomly initialize 3 of the 4 cameras, (choosing 1 camera to be fixed to try to pin down extra degrees of freedom), as well as randomly initialize all the 3D points and optimize using Nesterov momentum with gradient clipping.
 
 
 ![loss curve](/assets/images/mocap1/loss_curve.png){: class="smaller-image" style="margin-bottom: 0px;"}
