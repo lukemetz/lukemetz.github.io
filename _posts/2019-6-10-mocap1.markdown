@@ -1,16 +1,17 @@
 ---
-title: "Mocap via Probabilistic Inference"
+title: "Motion Capture via Probabilistic Inference"
 layout: post
-date: 2019-06-02 12:00
+date: 2019-06-30 12:00
 tag:
 - project
 - robotics
 - machine learning
+- mocap
 image:
 headerImage: false
 projects: false
-hidden: true
-description: "Work in progress of electronics for my robot arm"
+hidden: false
+description: "Software for a DIY motion capture system to ultimatly control my robot arm."
 category: blog
 author: lukemetz
 externalLink: false
@@ -21,10 +22,10 @@ In an effort to control my robot arm, I realize it would be good to have a way t
 
 As such, I figured it would be fun to build a motion capture system for this purpose! The basic idea is to have a bunch of webcams, add IR filters to them, and take pictures of objects with IR LEDs  on them. Then, because we are capturing from multiple points of view, the system is over constrained and we can work out the true positions.
 
-This post talks about the first steps taken to this end and includes a preliminary discussion of the potential hardware as well as a prototype structuring of the motion capture problem as probabilistic inference! As usual, I have no real idea what I am doing so feedback appreciated!
+This post talks about the first steps taken to this end and includes a preliminary discussion of the potential hardware as well as a prototype structuring of the motion capture problem as probabilistic inference! As usual, I have no real idea what I am doing so feedback is appreciated!
 
 # Hardware
-The hardware I settled on is a cheap [Logitech C270 webcam](https://www.amazon.com/gp/product/B004FHO5Y6/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) for $20. I disassembled these, 3D printed a little lens hood, and attached an [IR filter](https://www.bhphotovideo.com/c/product/292664-REG/LEE_Filters_87CP3_3_x_3_Infrared.html). For markers, I took some IR LEDs and sanded down the transparent plastic to give more of a diffuse output. Below, we can see a test shot with one of these cameras. The LED is super clear and should be fairly easy to pick out via some simple computer vision.
+The hardware I settled on is a cheap [Logitech C270 webcam](https://www.amazon.com/gp/product/B004FHO5Y6/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) for $20. I disassembled these, 3D printed little lens hoods, and attached [IR filter](https://www.bhphotovideo.com/c/product/292664-REG/LEE_Filters_87CP3_3_x_3_Infrared.html). For markers, I took some IR LEDs and sanded down the transparent plastic to give more of a diffuse output. Below, we can see a test shot with one of these cameras. The LED is super clear and should be fairly easy to pick out via some simple computer vision.
 
 <div class="side-by-side">
 <div class="toleft">
@@ -60,7 +61,7 @@ $$P(X|\theta) = \sum_{permutations of points} \prod_{camera} \prod_{time}  \prod
 
 
 ## Inference
-Ideally, I will do something proper (e.g. define a prior on $$\theta$$, and do [MCMC](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) or [VI](https://en.wikipedia.org/wiki/Variational_Bayesian_methods] based methods). For now, though,  let’s just compute a [MAP](https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation) estimate of $$P(X | \theta)$$. Put simply, let’s just find the single most likely configuration of cameras and 3D points, $$\theta$$, from which  the observed 2D data, $$X$$, could derive. This boils down to an optimization problem:
+Ideally, I will do something proper (e.g. define a prior on $$\theta$$, and do [MCMC](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) or [VI](https://en.wikipedia.org/wiki/Variational_Bayesian_methods] based methods).) For now, though,  let’s just compute a [MAP](https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation) estimate of $$P(X | \theta)$$. Put simply, let’s just find the single most likely configuration of cameras and 3D points, $$\theta$$, from which  the observed 2D data, $$X$$, could derive. This boils down to an optimization problem:
 $$\text{argmax}_{\theta} P(X |\theta)$$.
 Coming from the machine learning community, what better way to tackle this than by writing all of this in a differentiable programming language / framework (in my case [Jax](https://github.com/google/jax)), computing gradients, and doing SGD!
 
@@ -97,7 +98,7 @@ Thus far, I have tested all of this with 4 simulated cameras, at 2 points, and a
 
 ![loss curve](/assets/images/mocap1/loss_curve.png){: class="smaller-image" style="margin-bottom: 0px;"}
 <figcaption class="caption">Loss curve, (negative log likelihood of data), over the course of
-optimization. At 200 steps, sigma is increased causing the spike in
+optimization. At 2000 steps, sigma is increased causing the spike in
 loss.
 </figcaption>
 
