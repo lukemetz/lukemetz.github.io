@@ -110,6 +110,15 @@ publications_list:
   - year_split: true
     year: 2019
 
+  - title: Learning to Predict Without Looking Ahead: World Models Without Forward Prediction
+    people:
+      - C. Daniel Freeman
+      - Luke Metz
+      - David Ha
+    location: NeurIPS 2019
+    arxiv: https://arxiv.org/pdf/1910.13038.pdf
+
+
   - title: Understanding and correcting pathologies in the training of learned optimizers
     people:
       - Luke Metz
