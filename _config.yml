@@ -110,7 +110,7 @@ publications_list:
   - year_split: true
     year: 2019
 
-  - title: Learning to Predict Without Looking Ahead: World Models Without Forward Prediction
+  - title: "Learning to Predict Without Looking Ahead: World Models Without Forward Prediction"
     people:
       - C. Daniel Freeman
       - Luke Metz
