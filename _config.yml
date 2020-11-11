@@ -108,7 +108,65 @@ jekyll-mentions:
 
 publications_list:
   - year_split: true
+    year: 2020
+
+  - title: "Ridge Rider: Finding Diverse Solutions by Following Eigenvectors of the Hessian"
+    people:
+      - Jack Parker-Holder*
+      - Luke Metz
+      - Cinjon Resnick
+      - Hengyuan Hu
+      - Adam Lerer
+      - Alistair Letcher
+      - Alexander Peysakhovich
+      - Aldo Pacchiano
+      - Jakob Foerster*
+    location: NeurIPS 2020
+    arxiv: https://proceedings.neurips.cc/paper/2020/file/08425b881bcde94a383cd258cea331be-Paper.pdf
+
+  - title: "Reverse engineering learned optimizers reveals known and novel mechanisms"
+    people:
+      - Niru Maheswaranathan
+      - David Sussillo
+      - Luke Metz
+      - Ruoxi Sun
+      - Jascha Sohl-Dickstein
+    location: NeurIPS MetaLearning Workshop 2020
+    arxiv: https://arxiv.org/pdf/2011.02159.pdf
+  
+  - title: "Tasks, stability, architecture, and compute: Training more effective learned optimizers, and using them to train themselves"
+    people:
+      - Luke Metz
+      - Niru Maheswaranathan
+      - C Daniel Freeman
+      - Ben Poole
+      - Jascha Sohl-Dickstein
+    location: NeurIPS MetaLearning Workshop 2020
+    arxiv: https://arxiv.org/pdf/2009.11243.pdf
+
+  - title: "Using a thousand optimization tasks to learn hyperparameter search strategies"
+    people:
+      - Luke Metz
+      - Niru Maheswaranathan
+      - Ruoxi Sun
+      - C Daniel Freeman
+      - Ben Poole
+      - Jascha Sohl-Dickstein
+    location: NeurIPS MetaLearning Workshop 2020
+    arxiv: https://arxiv.org/pdf/2002.11887.pdf
+
+
+
+  - year_split: true
     year: 2019
+
+  - title: "On linear identifiability of learned representations"
+    people:
+      - Geoffrey Roeder
+      - Luke Metz
+      - Diederik P. Kingma
+    location: DeepMath Workshop 2019
+    arxiv: https://arxiv.org/pdf/2007.00810.pdf
 
   - title: "Learning to Predict Without Looking Ahead: World Models Without Forward Prediction"
     people:
