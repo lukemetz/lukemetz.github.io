@@ -100,8 +100,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-admin
+#- jemoji
 
 jekyll-mentions:
     base_url: https://github.com
