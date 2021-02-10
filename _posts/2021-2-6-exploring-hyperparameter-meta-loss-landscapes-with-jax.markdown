@@ -117,7 +117,7 @@ We can see we first descend into the global minima, then move out (due to moment
 
 ## Outer-loss: Optimization performance as a function of optimizer hyperparameters 
 
-Now, let’s explore how our inner problem training behaves as a function of momentum and learning rate. To do this, we will define an `outer_loss` function which, for a given set of hyperparameters, computes the mean inner-loss over the 50 step unroll. This can be considered a measurement of how “good” the learning rate and momentum are. We can jit this /entire/ unrolled computation so it runs fast.
+Now, let’s explore how our inner problem training behaves as a function of momentum and learning rate. To do this, we will define an `outer_loss` function which, for a given set of hyperparameters, computes the mean inner-loss over the 50 step unroll. This can be considered a measurement of how “good” the learning rate and momentum are to train this inner-problem quickly and to a low loss. We can jit this /entire/ unrolled computation so it runs fast.
 
 
 ```python
