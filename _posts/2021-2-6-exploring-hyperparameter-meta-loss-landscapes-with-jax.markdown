@@ -291,5 +291,5 @@ Conclusion
 I hope this demonstrates a bit of an insight into hyperparameter loss landscapes and how care should be taken when computing gradients through unrolled optimization problems as well as a bit of why so many researchers are loving Jax. Interested in exploring any of this further? Grab a free GPU / TPU colab and give it a go -- Jax is included by default. [My notebook can be found here.](https://colab.research.google.com/drive/12nB1nrvLJsu_3bEYJzd4jCftnIGLoMaK?usp=sharing)
 
 # Acknowldgements
-Thanks so much to [Chip Huyen](https://twitter.com/chipro), the best writer I know, and my amazing colleagues [C. Daniel Freeman](https://twitter.com/bucketofkets) and [Utku Evci](https://twitter.com/utkuevci) for feedback on this post.
+Thanks so much to [Chip Huyen](https://twitter.com/chipro), the best writer I know, and my amazing colleagues [C. Daniel Freeman](https://twitter.com/bucketofkets) and [Utku Evci](https://twitter.com/utkuevci) for feedback on this post. Thanks [Mat Kelcey](https://twitter.com/mat_kelcey) for the much shorter clolab + tpu snippet.
 
