@@ -2,6 +2,23 @@
     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script> 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        time_zone_offset = new Date().getTimezoneOffset() / 60;
+        prev = document.referrer;
+        id = localStorage.getItem("userid")
+        if (id === null) {
+            id = Date.now().toString(36) + Math.random().toString(36).substring(2);
+            localStorage.setItem("userid", id);
+        }
+        host_url = document.location.href
+
+        path = "https://pixel-v0.wl.r.appspot.com/pixel.gif?id=" + id + "&prev=" + prev + "&tz=" + time_zone_offset + "&host_url=" + host_url;
+        document.body.innerHTML += "<img src=" + path + ">";
+    });
+</script>
+
+
 {% if page.title == "Home"
    or page.title == "Blog"
    or page.title == "Projects"
