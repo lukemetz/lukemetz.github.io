@@ -1,4 +1,4 @@
-<script type="text/javascript"
+<script type="text/javascript">
     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script> 
 
@@ -6,7 +6,7 @@
     document.addEventListener("DOMContentLoaded", function (event) {
         time_zone_offset = new Date().getTimezoneOffset() / 60;
         prev = document.referrer;
-        id = localStorage.getItem("userid")
+        id = localStorage.getItem("userid");
         if (id === null) {
             id = Date.now().toString(36) + Math.random().toString(36).substring(2);
             localStorage.setItem("userid", id);
