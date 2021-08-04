@@ -36,9 +36,13 @@ layout: page
     </div>
 {% endif %}
 
+{% comment %}
 {% if site.related %}
     {% include related.html %}
 {% endif %}
+{% endcomment %}
+
+<div id="collective_recsys"></div>
 
 {% if site.show-author %}
     {% include author.html %}
