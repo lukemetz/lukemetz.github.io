@@ -108,7 +108,89 @@ jekyll-mentions:
 
 publications_list:
   - year_split: true
+    year: 2022
+
+  - title: "Lyapunov Exponents for Diversity in Differentiable Games"
+    people:
+        - Jonathan Lorraine
+        - Paul Vicol
+        - Jack Parker-Holder
+        - Tal Kachman
+        - Luke Metz
+        - Jakob Foerster
+    location: AAMAS 2022
+    arxiv: https://arxiv.org/pdf/2112.14570.pdf
+
+  - year_split: true
+    year: 2021
+
+  - title: "Gradients are Not All You Need"
+    people:
+        - Luke Metz*
+        - C Daniel Freeman*
+        - Samuel S Schoenholz
+        - Tal Kachman
+    arxiv: https://arxiv.org/pdf/2111.05803.pdf
+        
+  
+  - title: "Unbiased Gradient Estimation in Unrolled Computation Graphs with Persistent Evolution Strategies"
+    people:
+        - Paul Vicol
+        - Luke Metz
+        - Jascha Sohl-Dickstein
+    location: ICML 2021, Best paper award
+    arxiv: https://arxiv.org/pdf/2112.13835.pdf
+
+  - title: "Learn2Hop: Learned Optimization on Rough Landscapes"
+    people:
+        - Amil Merchant
+        - Luke Metz
+        - Samuel S Schoenholz
+        - Ekin D Cubuk
+    location: ICML 2021
+    arxiv: https://arxiv.org/pdf/2107.09661.pdf
+
+  - title: "On linear identifiability of learned representations"
+    people:
+      - Geoffrey Roeder
+      - Luke Metz
+      - Diederik P. Kingma
+    location: ICML 2021, DeepMath Workshop 2019
+    arxiv: https://arxiv.org/pdf/2007.00810.pdf
+
+  - title: "Training Learned Optimizers with Randomly Initialized Learned Optimizers"
+    people: 
+        - Luke Metz
+        - C. Daniel Freeman
+        - Niru Maheswaranathan
+        - Jascha Sohl-Dickstein
+    arxiv: https://arxiv.org/pdf/2101.07367
+
+  - title: "Reverse engineering learned optimizers reveals known and novel mechanisms"
+    people:
+      - Niru Maheswaranathan
+      - David Sussillo
+      - Luke Metz
+      - Ruoxi Sun
+      - Jascha Sohl-Dickstein
+    location: NeurIPS 2021. NeurIPS MetaLearning Workshop 2020
+    arxiv: https://arxiv.org/pdf/2011.02159.pdf
+
+  - year_split: true
     year: 2020
+
+  - title: "Parallel training of deep networks with local updates"
+    people:
+        - Michael Laskin*
+        - Luke Metz*
+        - Seth Nabarrao
+        - Mark Saroufim
+        - Badreddine Noune
+        - Carlo Luschi
+        - Jascha Sohl-Dickstein
+        - Pieter Abbeel
+    arxiv: https://arxiv.org/pdf/2012.03837.pdf
+
 
   - title: "Ridge Rider: Finding Diverse Solutions by Following Eigenvectors of the Hessian"
     people:
@@ -124,15 +206,6 @@ publications_list:
     location: NeurIPS 2020
     arxiv: https://proceedings.neurips.cc/paper/2020/file/08425b881bcde94a383cd258cea331be-Paper.pdf
 
-  - title: "Reverse engineering learned optimizers reveals known and novel mechanisms"
-    people:
-      - Niru Maheswaranathan
-      - David Sussillo
-      - Luke Metz
-      - Ruoxi Sun
-      - Jascha Sohl-Dickstein
-    location: NeurIPS MetaLearning Workshop 2020
-    arxiv: https://arxiv.org/pdf/2011.02159.pdf
   
   - title: "Tasks, stability, architecture, and compute: Training more effective learned optimizers, and using them to train themselves"
     people:
@@ -160,13 +233,6 @@ publications_list:
   - year_split: true
     year: 2019
 
-  - title: "On linear identifiability of learned representations"
-    people:
-      - Geoffrey Roeder
-      - Luke Metz
-      - Diederik P. Kingma
-    location: DeepMath Workshop 2019
-    arxiv: https://arxiv.org/pdf/2007.00810.pdf
 
   - title: "Learning to Predict Without Looking Ahead: World Models Without Forward Prediction"
     people:

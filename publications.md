@@ -13,7 +13,9 @@ layout: page
     <p class="people">
       {% for author in pub.people %}
         {% if author == "Luke Metz" %} <b> {% endif %}
+        {% if author == "Luke Metz*" %} <b> {% endif %}
         {{author}}{% if forloop.last == false %},{% endif %}
+        {% if author == "Luke Metz*" %} </b> {% endif %}
         {% if author == "Luke Metz" %}</b>{% endif %}
       {% endfor %}
     </p>
