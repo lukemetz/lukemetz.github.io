@@ -42,7 +42,8 @@ Performance of 8 different models with different hidden sizes (shown in blue). T
     
 
 
-The data looks surprisingly linear. Great, we found our "law"! We can find the coefficients of this linear relation with least squares: `loss(hsize) = 7.0 - 0.275 log(hsize)`. Empirically, this seems to hold for more than two orders of magnitude in hidden size.
+The data looks surprisingly linear on this log-log plot. Great, we found our "law"!
+We can find the coefficients of this relation with least squares: `loss(hsize) = 7.0 - 0.275 log(hsize)`. Empirically, this seems to hold for more than two orders of magnitude in hidden size.
 
 All excited about our nice looking interpolation, we thought we could extrapolate a little over one order of magnitude in hidden size to train a bigger model. However, to our dismay, we find the performance dramatically off of our predicted curve.
 
@@ -71,7 +72,7 @@ With this data, the story becomes quite clear and should come as no surprise.
 As we increase model size, the optimal learning rate shrinks.
 We can also see that if we simply train with a smaller learning rate, we would come close to our originally predicted performance at a given model size.
 We could even model the relationship between the optimal learning rate and model size then use this model to come up with yet another prediction.
-The plot of optimal learning rate vs hidden size (d) appears linear so incorporating this wouldn't be much trouble.
+The plot of optimal learning rate vs hidden size (d) appears to be a power law (linear on log-log) so incorporating this wouldn't be much trouble.
 
 Even with this correction, how do we know we are not tricking ourselves again with some other hyperparameter which will wreak havoc in the next order of magnitude of hidden size?
 Learning rate seems to be important, but what about learning rate schedules?
@@ -94,7 +95,7 @@ Knowing what to do about this, or what parameters to tune to fix this performanc
 In my opinion, one must balance using scaling laws to extrapolate performance at larger scales, and actually evaluating performance at a larger scale.
 In some sense this is obvious, and a rough approximation of what is done in practice.
 As the study of scaling develops, I hope this balance can be made more explicit and that one can make more use of scaling relationships to enable more research at a small scale.
-Take this particular example, while we found that naively scaling with a fixed learning rate does not extrapolate, we did find a linear relationship between model size and learning rate which leads to models that do extrapolate within the tested model sizes. Is there some other factor that we are missing if we try to extrapolate to even larger models? Possibly.
+Take this particular example, while we found that naively scaling with a fixed learning rate does not extrapolate, we did find a power law relationship between model size and learning rate which leads to models that do extrapolate within the tested model sizes. Is there some other factor that we are missing if we try to extrapolate to even larger models? Possibly.
 It’s hard to know without running the experiment.
 
 
