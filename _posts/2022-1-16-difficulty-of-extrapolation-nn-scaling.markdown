@@ -1,7 +1,7 @@
 ---
 title: "On the Difficulty of Extrapolation with NN Scaling"
 layout: post
-date: 2022-01-20 12:00
+date: 2022-01-24 12:00
 tag:
 - machine learning
 - scaling
