@@ -62,7 +62,7 @@ Luckily, we are working on a small scale and thus can afford the luxury of being
 <div style="margin-left:-100px; margin-right:-100px">
 <img src="/assets/images/nn_scaling_blog/4pane.png" />
 <figcaption class="caption">
-The results of training 12 different model sizes with 12 different learning rates. Each figure shows a different representation of this data. In (a) we show loss achieved for different hidden sizes with learning rate shown in color. Our extrapolation before was with a single learning rate. In (b) we show loss for a given learning rate with hidden size in color. Larger models reach a lower loss, but need a smaller learning rate. In (c) we show we show a heat map showing learning rate vs hidden size. Each pixel here is the results of a full training run. In (d) we look at what the optimal learning rate is for a given hidden size.
+The results of training 12 different model sizes with 12 different learning rates. Each figure shows a different representation of this data. In (a) we show loss achieved for different hidden sizes with learning rate shown in color. Our extrapolation before was with a single learning rate. In (b) we show loss for a given learning rate with hidden size in color. Larger models reach a lower loss, but need a smaller learning rate. In (c) we show a heat map showing learning rate vs hidden size. Each pixel here is the results of a full training run. In (d) we look at what the optimal learning rate is for a given hidden size.
  </figcaption>
 </div>
 
@@ -82,7 +82,7 @@ What about architecture decisions? What about relationships between width and de
 Issues of scaling relationships seem to keep popping up as more and more folks train bigger and bigger models.
 Even simple things like scaling learning rates with model size as shown here is not always done (i.e. when specifying a finetuning procedure for language models).
 To its credit, the [original scaling law paper](https://arxiv.org/abs/2001.08361) discusses many theses issues (width/depth scaling, relationship with LR, [effect of batchsize](https://arxiv.org/abs/1812.06162)), but also acknowledges that it neglects to study many others.
-They also discuss relationships with compute amount and datasize but I don't discuss or vary those here. The scaling law's they propose are designed under the assumption that the underlying model is trained with the best performing hyper parameters.
+They also discuss relationships with compute amount and datasize but I don't discuss or vary those here. The scaling laws they propose are designed under the assumption that the underlying model is trained with the best performing hyper parameters.
 
 So what can we do about potentially misleading extrapolations? In an ideal world, we would have a full understanding of how every aspect of our model changes with scale and use this understanding to design larger scale models. Without this, extrapolation seems fraught and could potentially result in an expensive mistake. Reaching this point of full understanding, however, feels impossible given just how many factors are at play. Tuning every parameter at every scale is not a solution either given the computational costs. 
 
