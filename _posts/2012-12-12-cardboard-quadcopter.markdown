@@ -8,10 +8,10 @@ tag:
 - cardboard
 image:
 headerImage: false
-projects: true
-hidden: true # don't count this post in blog pagination
+projects: false
+hidden: false
 description: "A quadcopter made of cardboard."
-category: project
+category: blog
 author: lukemetz
 externalLink: false
 ---

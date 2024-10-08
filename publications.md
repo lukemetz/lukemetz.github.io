@@ -4,6 +4,9 @@ layout: page
 ---
 ## Publications
 
+This list is a bit out of date. See my [Google Scholar](https://scholar.google.com/citations?user=k_u5ULgAAAAJ&hl=en) for a more recent work.
+
+
 {% for pub in site.publications_list %}
 {% if pub.year_split == true %}
   <p class="year"><b>{{pub.year}}</b></p>

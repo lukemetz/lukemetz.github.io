@@ -1,6 +1,6 @@
 # main text of home
 name: Luke Metz
-bio: Machine Learning, Robotics, Making
+bio: AI research & product
 
 # twitter summary info
 description: description?
@@ -8,7 +8,7 @@ description: description?
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/me.png
+picture: assets/images/me2.jpeg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
@@ -27,7 +27,7 @@ analytics-google: 'UA-112984812-1'
 
 # To enable piwik tracking, supply your url & site ID below
 # analytics-piwik-url: 'piwik.my-host.com'
-# analytics-piwik-id: 1
+# analytics-piwik-id: 21
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
@@ -58,7 +58,7 @@ authors:
         name: Luke Metz
         # bio: A Man who travels the world eating noodles
         external-image: false
-        picture: assets/images/me.png
+        picture: assets/images/me2.jpeg
         twitter: Luke_Metz
 
 # do you want a larger site? change the option below
@@ -71,7 +71,7 @@ width: normal
 # paginate_path: "blog/:num/"
 
 # if you don't need projects, comment the *projects* configs below
-projects: true
+projects: false
 
 # if you don't need "about" or "blog", comment them out below
 about: true
@@ -107,8 +107,61 @@ jekyll-mentions:
     base_url: https://github.com
 
 publications_list:
+
+  - year_split: true
+    year: 2023
+  
+  - title: "Gpt-4 technical report"
+    people: OpenAI
+    arxiv: https://arxiv.org/pdf/2303.08774
+
+  - title: "Variance-reduced gradient estimation via noise-reuse in online evolution strategies"
+    people: 
+      - Oscar Li
+      - James Harrison
+      - Jascha Sohl-Dickstein
+      - Virginia Smith
+      - Luke Metz
+    location: NeurIPS 2023
+    arxiv: https://arxiv.org/abs/2304.12180
+
+  - title: "Transformer-based learned optimization"
+    people: 
+      - Erik Gärtner
+      - Luke Metz
+      - Mykhaylo Andriluka
+      - C Daniel Freeman
+      - Cristian Sminchisescu
+    location: IEEE/CVF Conference on Computer Vision and Pattern Recognition
+    arxiv: "https://openaccess.thecvf.com/content/CVPR2023/papers/Gartner_Transformer-Based_Learned_Optimization_CVPR_2023_paper.pdf"
+
   - year_split: true
     year: 2022
+
+  - title: "ChatGPT: Optimizing language models for dialogue (blog post)"
+    people: OpenAI
+    arxiv: https://openai.com/index/chatgpt/
+
+  - title: "Velo: Training versatile learned optimizers by scaling up"
+    people:
+      - Luke Metz
+      - James Harrison
+      - C Daniel Freeman
+      - Amil Merchant
+      - Lucas Beyer
+      - James Bradbury
+      - Naman Agrawal
+      - Ben Poole
+      - Igor Mordatch
+      - Adam Roberts
+      - Jascha Sohl-Dickstein
+    arxiv: "https://arxiv.org/abs/2211.09760"
+
+  - title: "Beyond the imitation game: Quantifying and extrapolating the capabilities of language models"
+    people:
+      - "[Many people!]"
+    arxiv: https://arxiv.org/abs/2206.04615
+    
 
   - title: "Lyapunov Exponents for Diversity in Differentiable Games"
     people:
@@ -120,6 +173,45 @@ publications_list:
         - Jakob Foerster
     location: AAMAS 2022
     arxiv: https://arxiv.org/pdf/2112.14570.pdf
+
+
+  - title: "General-purpose in-context learning by meta-learning transformers"
+    people:
+      - Louis Kirsch
+      - James Harrison
+      - Jascha Sohl-Dickstein
+      - Luke Metz
+    arxiv: https://arxiv.org/pdf/2212.04458
+
+  - title: "A closer look at learned optimization: Stability, robustness, and inductive biases"
+    people: 
+      - James Harrison
+      - Luke Metz
+      - Jascha Sohl-Dickstein
+    location: NeurIPS 2022
+    arxiv: "https://proceedings.neurips.cc/paper_files/paper/2022/file/184c1e18d00d7752805324da48ad25be-Paper-Conference.pdf"
+  
+  - title: "Discovered policy optimisation"
+    people: 
+      - Chris Lu
+      - Jakub Kuba
+      - Alistair Letcher
+      - Luke Metz
+      - Christian Schroeder de Witt
+      - Jakob Foerster
+    location: NeurIPS 2022
+    arxiv: "https://proceedings.neurips.cc/paper_files/paper/2022/file/688c7a82e31653e7c256c6c29fd3b438-Paper-Conference.pdf"
+
+  - title: "Practical tradeoffs between memory, compute, and performance in learned optimizers"
+    people: 
+      - Luke Metz
+      - C Daniel Freeman
+      - James Harrison
+      - Niru Maheswaranathan
+      - Jascha Sohl-Dickstein
+    location: Conference on Lifelong Learning Agents, 2022
+    arxiv: https://proceedings.mlr.press/v199/metz22a/metz22a.pdf
+
 
   - year_split: true
     year: 2021
